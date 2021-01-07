@@ -3,9 +3,11 @@ const http = require('http')
 
 const server = http.createServer((req, res) => {})
 
-server.listen(3500, ()=>{
-    console.log("Listening on port 3500...")
-})
+server.listen(process.env.PORT || 3000)
+    console.log("Listening on port 3000...")
+
+
+
 
 wsServer = new SocketServer({httpServer:server})
 
